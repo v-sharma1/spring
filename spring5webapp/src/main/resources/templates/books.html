@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title>Spring Framework Guru</title>
 </head>
 <body>
 <h1>Book List</h1>
-
+<!-- Access books from the URL http://localhost:8080/books -->
 <table>
 	<tr>
 		<th>ID</th>
 		<th>Title</th>
-		<th>Author</th>
+		<th>Publisher</th>
 	</tr>
 	
 	<tr th:each="book : ${books}">

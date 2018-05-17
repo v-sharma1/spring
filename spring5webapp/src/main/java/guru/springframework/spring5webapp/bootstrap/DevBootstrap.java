@@ -1,6 +1,19 @@
 package guru.springframework.spring5webapp.bootstrap;
 
 import org.springframework.context.ApplicationListener;
+
+/**
+ * 
+ * Access the H2 database from the URL http://localhost:8080/h2-console
+ * 
+ * Make sure to use the in-memory JDBC URL: jdbc:h2:mem:testdb
+ * 
+ * Other details are:
+ * Driver class: org.h2.Driver
+ * User name: sa
+ * Password: <blank>
+ * 
+ */
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
