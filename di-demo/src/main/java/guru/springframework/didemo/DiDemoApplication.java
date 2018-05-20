@@ -17,7 +17,7 @@ public class DiDemoApplication {
 		
 		MyController controller = (MyController) ctx.getBean("myController");
 		
-		controller.hello();
+		System.out.println(controller.hello());
 		
 		// Accessing DI beans
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
