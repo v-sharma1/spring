@@ -1,0 +1,34 @@
+# This is a comment
+
+name: John
+
+names: #Comment
+    - John
+    - Paul
+    - Ringo
+
+pound_sign: "#"
+
+book:
+    author: Joe Buck
+    publisher: Random House
+
+truth: yes
+
+another_truth: True
+
+more_truth: true
+
+false: no #No, false, FALSE
+
+string_val: "It's a quote"
+
+colon_str: "my course: title"
+
+include_new_lines: |
+    nekde cemlkf mcledm
+    dnekncf mclkc mlmfce
+
+ignore_new_lines: >
+    dnek dcned cndkc
+    cnkdj cmdlk cmdkl

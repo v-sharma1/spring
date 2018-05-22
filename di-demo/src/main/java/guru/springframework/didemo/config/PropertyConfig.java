@@ -11,6 +11,7 @@ import org.springframework.core.env.Environment;
 
 import guru.springframework.didemo.examplebeans.FakeDataSource;
 import guru.springframework.didemo.examplebeans.FakeJMSBroker;
+import guru.springframework.didemo.examplebeans.FakeNoSQLDataSource;
 
 @Configuration
 //@PropertySource("classpath:datasource.properties")
@@ -38,13 +39,22 @@ public class PropertyConfig {
 	String url;
 	
 	@Value("${jms.user}")
-	String jms_user;
+	String jmsUser;
 	
 	@Value("${jms.password}")
-	String jms_password;
+	String jmsPassword;
 	
 	@Value("${jms.url}")
-	String jms_url;
+	String jmsURL;
+	
+	@Value("${nosql.user}")
+	String nosqlUser;
+	
+	@Value("${nosql.password}")
+	String nosqlPassword;
+	
+	@Value("${nosql.url}")
+	String nosqlURL;
 	
 	// Binding the values from property file into the datasource bean
 	@Bean
@@ -65,13 +75,25 @@ public class PropertyConfig {
 	@Bean
 	public FakeJMSBroker fakeJMSBroker() {
 		FakeJMSBroker fakeJMSBroker = new FakeJMSBroker();
-		fakeJMSBroker.setUser(jms_user);
-		fakeJMSBroker.setPassword(jms_password);
-		fakeJMSBroker.setUrl(jms_url);
+		fakeJMSBroker.setUser(jmsUser);
+		fakeJMSBroker.setPassword(jmsPassword);
+		fakeJMSBroker.setUrl(jmsURL);
 		
 		return fakeJMSBroker;
 	}
 	
+	// These properties are getting loaded from default 
+	// application.yml YAML file
+	@Bean
+	public FakeNoSQLDataSource fakeNoSQLDataSource() {
+		FakeNoSQLDataSource fakeNoSQLDataSource = new FakeNoSQLDataSource();
+		fakeNoSQLDataSource.setUser(nosqlUser);
+		fakeNoSQLDataSource.setPassword(nosqlPassword);
+		fakeNoSQLDataSource.setUrl(nosqlURL);
+		
+		return fakeNoSQLDataSource;
+	}
+
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer properties() {
 		return new PropertySourcesPlaceholderConfigurer();

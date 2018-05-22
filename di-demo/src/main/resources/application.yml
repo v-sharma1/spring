@@ -1,0 +1,7 @@
+# Defining some properties using YAML
+# application.yml is the default filename used by Spring boot
+
+nosql:
+  user: vaibhav_nosql
+  password: sharma_nosql
+  url: dnckedn_nosql

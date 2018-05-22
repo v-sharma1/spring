@@ -10,6 +10,7 @@ import guru.springframework.didemo.controllers.PropertyInjectedController;
 import guru.springframework.didemo.controllers.SetterInjectedController;
 import guru.springframework.didemo.examplebeans.FakeDataSource;
 import guru.springframework.didemo.examplebeans.FakeJMSBroker;
+import guru.springframework.didemo.examplebeans.FakeNoSQLDataSource;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -29,5 +30,7 @@ public class DiDemoApplication {
 		System.out.println(ctx.getBean(FakeDataSource.class).getUser());
 		
 		System.out.println(ctx.getBean(FakeJMSBroker.class).getUser());
+		
+		System.out.println(ctx.getBean(FakeNoSQLDataSource.class).getUser());
 	}
 }
