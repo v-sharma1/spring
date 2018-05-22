@@ -18,7 +18,7 @@ import guru.springframework.didemo.examplebeans.FakeJMSBroker;
 //@PropertySource({"classpath:datasource.properties","classpath:jms.properties"})
 // Commented the PropertySource annotation and using the following PropertySources
 // annotation. Its just another more readable way of specifying multiple property
-// files. Its better illustrated when you have large number of files
+// files. Its better illustrated when you have lot of property files
 @PropertySources({
 	@PropertySource("classpath:datasource.properties"),
 	@PropertySource("classpath:jms.properties")
