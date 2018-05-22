@@ -1,7 +1,24 @@
 # Defining some properties using YAML
 # application.yml is the default filename used by Spring boot
+# 
+# YAML file can also contain all profile specific properties
+# e.g. application-de.properties file will override the properties
+# of application.properties if German('de') profile is set
+# Use the triple dash as file separator
 
 nosql:
   user: vaibhav_nosql
   password: sharma_nosql
   url: dnckedn_nosql
+ 
+---
+# Note you need to have profile set to German(de) in application.properties
+# for the following properties to be considered
+
+spring:
+  profiles: de
+
+nosql:
+  user: vaibhav_nosql_de
+  password: sharma_nosql_de
+  url: dnckedn_nosql_de
