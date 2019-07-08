@@ -17,7 +17,7 @@ public class ApplicationProperties {
     }
 
     public static class Batch {
-        private String inputPath = "/data";
+        private String inputPath = "data";
 
         public String getInputPath() {
             return this.inputPath;
